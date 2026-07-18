@@ -383,6 +383,18 @@
   .credit a{ color: var(--brass); text-decoration:none; }
   .credit a:hover{ text-decoration:underline; }
 
+.linkedin-credit {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--slate-dim);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.linkedin-credit:hover {
+    color: var(--brass);
+}
+
   @media (max-width: 600px){
     .ledger-card{ padding: 24px 18px 28px; }
     h1.formula-name{ font-size:1.3rem; }
