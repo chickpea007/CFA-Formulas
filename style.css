@@ -383,16 +383,21 @@
   .credit a{ color: var(--brass); text-decoration:none; }
   .credit a:hover{ text-decoration:underline; }
 
-.linkedin-credit {
+.linkedin-credit{
+    text-align: right;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
+    line-height: 1.5;
     color: var(--slate-dim);
-    text-decoration: none;
-    transition: color 0.2s ease;
 }
 
-.linkedin-credit:hover {
+.linkedin-credit a{
     color: var(--brass);
+    text-decoration: none;
+}
+
+.linkedin-credit a:hover{
+    text-decoration: underline;
 }
 
   @media (max-width: 600px){
