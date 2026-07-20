@@ -535,7 +535,8 @@ DATA.l2.fra = [
       { id:'so_settlement_1', label:'Settlement Date Price' },
       { id:'so_book_1',       label:'Book Value per Share' },
     ],
-  },{
+  },
+  {
     id: 'allowance_npl_ratio',
     name: 'Allowance for Loan Losses to Non-Performing Loans',
     type: 'fraction',
