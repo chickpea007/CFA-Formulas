@@ -536,4 +536,93 @@ DATA.l2.fra = [
       { id:'so_book_1',       label:'Book Value per Share' },
     ],
   },
+{
+    id: 'allowance_npl_ratio',
+    name: 'Allowance for Loan Losses to Non-Performing Loans',
+    type: 'fraction',
+    numerator:   [ { id:'allnpl_allowance_1', label:'+ Allowance for Loan Losses' } ],
+    denominator: [ { id:'allnpl_npl_1', label:'Non-Performing Loans' } ],
+    distractors: [
+      { id:'allnpl_provision_1', label:'Provision for Loan Losses' },
+      { id:'allnpl_chargeoff_1', label:'Net Loan Charge-offs' },
+    ],
+  },
+  {
+    id: 'allowance_nco_ratio',
+    name: 'Allowance for Loan Losses to Net Loan Charge-offs',
+    type: 'fraction',
+    numerator:   [ { id:'allnco_allowance_1', label:'+ Allowance for Loan Losses' } ],
+    denominator: [ { id:'allnco_writeoff_1', label:'Net Loan Charge-offs' } ],
+    distractors: [
+      { id:'allnco_provision_1', label:'Provision for Loan Losses' },
+      { id:'allnco_npl_1', label:'Non-Performing Loans' },
+    ],
+  },
+  {
+    id: 'provision_nco_ratio',
+    name: 'Provision for Loan Losses to Net Loan Charge-offs',
+    type: 'fraction',
+    numerator:   [ { id:'pronco_provision_1', label:'+ Provision for Loan Losses' } ],
+    denominator: [ { id:'pronco_writeoff_1', label:'Net Loan Charge-offs' } ],
+    distractors: [
+      { id:'pronco_allowance_1', label:'Allowance for Loan Losses' },
+      { id:'pronco_npl_1', label:'Non-Performing Loans' },
+    ],
+  },
+  {
+    id: 'lcr',
+    name: 'Liquidity Coverage Ratio',
+    type: 'fraction',
+    numerator:   [ { id:'lcr_hqla_1', label:'+ Highly Liquid Assets' } ],
+    denominator: [ { id:'lcr_outflow_1', label:'Expected Cash Outflows' } ],
+    distractors: [
+      { id:'lcr_asf_1', label:'Available Stable Funding' },
+      { id:'lcr_rsf_1', label:'Required Stable Funding' },
+    ],
+  },
+  {
+    id: 'nsfr',
+    name: 'Net Stable Funding Ratio',
+    type: 'fraction',
+    numerator:   [ { id:'nsfr_asf_1', label:'+ Available Stable Funding' } ],
+    denominator: [ { id:'nsfr_rsf_1', label:'Required Stable Funding' } ],
+    distractors: [
+      { id:'nsfr_hqla_1', label:'Highly Liquid Assets' },
+      { id:'nsfr_outflow_1', label:'Expected Cash Outflows' },
+    ],
+  },
+  {
+    id: 'roe_dupont5',
+    name: 'ROE — 5-Way DuPont (Ratio Form)',
+    type: 'list',
+    terms: [
+      { id:'roe5_a_1', label:'× (Net Income / EBIT)' },
+      { id:'roe5_b_1', label:'× (EBIT / EBT)' },
+      { id:'roe5_c_1', label:'× (EBT / Revenue)' },
+      { id:'roe5_d_1', label:'× (Revenue / Avg Total Assets)' },
+      { id:'roe5_e_1', label:'× (Avg Total Assets / Avg Equity)' },
+    ],
+    distractors: [
+      { id:'roe5_wrong1', label:'× (Net Income / Revenue)' },
+      { id:'roe5_wrong2', label:'× (EBT / EBIT)' },
+      { id:'roe5_wrong3', label:'× (Avg Equity / Avg Total Assets)' },
+    ],
+  },
+  {
+    id: 'roe_dupont5_named',
+    name: 'ROE — 5-Way DuPont (Named Components)',
+    type: 'list',
+    terms: [
+      { id:'roe5n_tax_1', label:'× Tax Burden' },
+      { id:'roe5n_int_1', label:'× Interest Burden' },
+      { id:'roe5n_ebitmargin_1', label:'× EBIT Margin' },
+      { id:'roe5n_assetturn_1', label:'× Asset Turnover' },
+      { id:'roe5n_finlev_1', label:'× Financial Leverage' },
+    ],
+    distractors: [
+      { id:'roe5n_wrong1', label:'× Net Profit Margin' },
+      { id:'roe5n_wrong2', label:'× Operating Margin' },
+      { id:'roe5n_wrong3', label:'× Equity Multiplier Squared' },
+    ],
+  },
 ];
